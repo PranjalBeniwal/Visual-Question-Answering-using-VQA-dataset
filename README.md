@@ -4,7 +4,7 @@
 ```
 .
 +-- dataset/
-|   +-- images/ 
+|   +-- Images/ 
 |       +-- train2014/
 |       +-- ...
 |   +-- train2014/     (resized images)
@@ -53,7 +53,7 @@ $ ./download_and_unzip_datasets.csh
 #### 3. Preproccess input data for (images, questions and answers).
 
 ```bash
-$ python resize_images.py --input_dir='../dataset/images' --output_dir='../dataset'  
+$ python resize_images.py --input_dir='../dataset/Images' --output_dir='../dataset'  
 $ python make_vacabs_for_questions_answers.py --input_dir='../dataset'
 $ python build_vqa_inputs.py --input_dir='../dataset' --output_dir='../dataset'
 ```
@@ -71,8 +71,13 @@ $ cd ..
 $ python train.py --model_name="<name to save logs>" 
 ```
 
-I was able to receive accuracy of 60.98% on the train data set and an accuracy of 57.32% on the val data set after 10 epochs
+I was able to receive accuracy of 60.98% on the train data set and an accuracy of 57.32% on the val data set after 10 epochs.
+
+# SAN implementation on VQA V2.0 dataset
+Torch implementation of an attention-based visual question answering model ([Stacked Attention Networks for Image Question Answering, Yang et al., CVPR16][1]).
+
+![Imgur](http://i.imgur.com/VbqIRZz.png)
 
 
-
+[1]: https://arxiv.org/abs/1511.02274
 
