@@ -34,6 +34,7 @@
 ```
 
 ## Usage 
+## (for running in google colab add '!' befor shell commands)
 
 #### 1. Clone the repository .(in colab add ! before command)
 ```bash
@@ -45,7 +46,7 @@ used VQA2 for this project
 ```bash
 $ cd visual_question_answering/utils
 $ chmod +x download_and_unzip_datasets.csh
-$ !sudo apt-get install tcsh
+$ sudo apt-get install tcsh
 $ ./download_and_unzip_datasets.csh
 ```
 
