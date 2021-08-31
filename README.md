@@ -44,7 +44,7 @@ $ git clone https://github.com/PranjalBeniwal/Visual-Question-Answering-using-VQ
 #### 2. Download and unzip the dataset from official url of VQA: https://visualqa.org/download.html.
 used VQA2 for this project
 ```bash
-$ cd visual_question_answering/utils
+$ cd visual_question_answering/utilities
 $ chmod +x download_and_unzip_datasets.csh
 $ sudo apt-get install tcsh
 $ ./download_and_unzip_datasets.csh
@@ -53,16 +53,26 @@ $ ./download_and_unzip_datasets.csh
 #### 3. Preproccess input data for (images, questions and answers).
 
 ```bash
-$ python resize_images.py --input_dir='../dataset/Images' --output_dir='../dataset'  
+$ python resize_images.py --input_dir='../dataset/images' --output_dir='../dataset'  
 $ python make_vacabs_for_questions_answers.py --input_dir='../dataset'
 $ python build_vqa_inputs.py --input_dir='../dataset' --output_dir='../dataset'
 ```
 
-#### 4. Train model for VQA task.
+#### 4. Install numpy-1.16 if not installed
+
+```bash
+$ pip install numpy==1.16.1
+```
+
+#### 5. Train model for VQA task.
 
 ```bash
 $ cd ..
 $ python train.py --model_name="<name to save logs>" 
 ```
+
+I was able to receive accuracy of 60.98% on the train data set and an accuracy of 57.32% on the val data set after 10 epochs
+
+
 
 
