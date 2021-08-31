@@ -5,8 +5,8 @@
 # One may need to change directory for datasets like this.
 #set DATASETS_DIR = "/run/media/hoosiki/WareHouse3/mtb/datasets/VQA"
 
-mkdir -p "../datasets"
-set DATASETS_DIR = "../datasets"
+mkdir -p "../dataset"
+set DATASETS_DIR = "../dataset"
 
 ##########################################################
 
